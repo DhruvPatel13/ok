@@ -1,0 +1,122 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img/background1.png)  no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+.clock{
+    background-image: url(clock.png);
+    background-size: 110%;
+    background-position: center;
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    padding: 1rem;
+}
+
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 50%, 0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hand{
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0,1.92,.58,1);
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+.hour-hand{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    width: 3%;
+    height: 27%;
+    top: 23.5%;
+    left: 48.5%;
+    z-index: 1;
+}
+.min-hand{
+    background-color: whitesmoke;
+    width: 2%;
+    height: 40%;
+    top: 10.5%;
+    left: 49%;
+    z-index: 1;
+}
+.second-hand{
+    background-color: red;
+    width: 1.3%;
+    height: 45%;
+    top: 5.5%;
+    left: 49.30%;
+    z-index: 1;
+}
+.line{
+    background-color: black;
+    height: 130px;
+    align-self: center;
+    border-radius: 5px;
+    width: 15%;
+    z-index: 1;
+    /* hour hand ke liye */
+}
+.centerDot{
+    height: 40px;
+    width: 40px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+@media screen and (max-width: 700px) {
+    body{
+        background: url(img/background2.jpg);
+        background-size: cover;
+    }
+    .clock{
+        height: 25rem;
+        width: 25rem;
+    }
+    .line{
+        height: 108px;
+        width: 10%;
+    }
+}
+@media screen and (max-width: 500px) {
+    body{
+        background-position: bottom;
+        background: url(img/background3.jpg)  ;
+        background-size: cover;
+    }
+    .clock{
+        height: 20rem;
+        width: 20rem;
+    }
+    .line{
+        height: 86px;
+        width: 10%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .clock{
+        height: 15rem;
+        width: 15rem;
+        background-size: 100%;
+    }
+    .line{
+        height: 65px;
+        width: 10%;
+    }
+}
